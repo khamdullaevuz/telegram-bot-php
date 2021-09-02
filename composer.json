@@ -6,11 +6,16 @@
     "autoload": {
         "classmap": ["src"]
     },
+    "require": {
+        "php": ">=7.1", 
+        "ext-sqlite3": "*",       
+        "ext-mysqli": "*",
+        "ext-pdo": "*"
+    },
     "authors": [
         {
             "name": "Elbek Khamdullaev",
             "email": "elbek.khamdullaev@mail.ru"
         }
-    ],
-    "require": {}
+    ]
 }
