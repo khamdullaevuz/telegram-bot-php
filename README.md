@@ -1,5 +1,7 @@
 # Framework
 
+![PHP](https://img.shields.io/badge/php-%3E%3D7.1-8892bf.svg)
+
 ![GitHub forks](https://img.shields.io/github/forks/KhamdullaevUz/telegram-bot-php?style=flat)
 ![GitHub Repo stars](https://img.shields.io/github/stars/KhamdullaevUz/telegram-bot-php?style=flat)
 ![GitHub watchers](https://img.shields.io/github/watchers/KhamdullaevUz/telegram-bot-php?style=flat)
