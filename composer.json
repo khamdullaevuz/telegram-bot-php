@@ -1,0 +1,16 @@
+{
+    "name": "khamdullaevuz/telegram-bot-php",
+    "type": "library",
+    "description": "Telegram bot framework",
+    "license": "MIT",
+    "autoload": {
+        "classmap": ["src"]
+    },
+    "authors": [
+        {
+            "name": "Elbek Khamdullaev",
+            "email": "elbek.khamdullaev@mail.ru"
+        }
+    ],
+    "require": {}
+}
