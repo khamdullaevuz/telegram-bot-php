@@ -81,7 +81,7 @@ if($text == "/start"){
 }
 ```
 
-#### Ma'lumotlar bazasi bilan ishlash
+### Ma'lumotlar bazasi bilan ishlash
 
 Mavjud ma'lumotlar bazasi: mysqli, sqlite, pdo
 
