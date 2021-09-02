@@ -5,4 +5,7 @@ require 'framework/Framework.php';
 require 'method/Method.php';
 require 'plugin/Plugin.php';
 require 'update/Update.php';
-require 'database/Database.php';
+
+if (in_array(['sqlite3', 'mysqli', 'pdo'], get_loaded_extensions())) {
+    require 'database/Database.php';
+}
