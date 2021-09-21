@@ -8,11 +8,18 @@
 
 namespace Framework;
 
-class Framework
+class Framework extends Method
 {
+    private static $api_key;
+
+    function __construct($api_key)
+    {
+        self::$api_key = $api_key;
+    }
+
     public static function Request($method, $datas = [])
     {
-        $url = "https://api.telegram.org/bot" . Config::getApiToken() . "/" . $method;
+        $url = "https://api.telegram.org/bot" . self::$api_key . "/" . $method;
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

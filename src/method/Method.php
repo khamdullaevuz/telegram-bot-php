@@ -10,7 +10,7 @@ namespace Framework;
 
 class Method
 {
-    public static function sendMessage($chat_id, $datas = [])
+    public function sendMessage($chat_id, $datas = [])
     {
         return Framework::Request(
             'sendMessage',
@@ -20,12 +20,12 @@ class Method
         );
     }
 
-    public static function getMe()
+    public function getMe()
     {
         return Framework::Request('getme');
     }
 
-    public static function sendPhoto($chat_id, $datas = [])
+    public function sendPhoto($chat_id, $datas = [])
     {
         return Framework::Request(
             'sendPhoto',
@@ -35,7 +35,7 @@ class Method
         );
     }
 
-    public static function sendAudio($chat_id, $datas = [])
+    public function sendAudio($chat_id, $datas = [])
     {
         return Framework::Request(
             'sendAudio',
@@ -45,7 +45,7 @@ class Method
         );
     }
 
-    public static function sendVideo($chat_id, $datas = [])
+    public function sendVideo($chat_id, $datas = [])
     {
         return Framework::Request(
             'sendVideo',
@@ -55,7 +55,7 @@ class Method
         );
     }
 
-    public static function sendAction($chat_id, $action)
+    public function sendAction($chat_id, $action)
     {
         return Framework::Request('sendChatAction', [
             'chat_id' => $chat_id,
@@ -63,7 +63,7 @@ class Method
         ]);
     }
 
-    public static function sendDocument($chat_id, $datas = [])
+    public function sendDocument($chat_id, $datas = [])
     {
         return Framework::Request(
             'sendDocument',
@@ -73,7 +73,7 @@ class Method
         );
     }
 
-    public static function sendAnimation($chat_id, $datas = [])
+    public function sendAnimation($chat_id, $datas = [])
     {
         return Framework::Request(
             'sendAnimation',
@@ -83,7 +83,7 @@ class Method
         );
     }
 
-    public static function sendVoice($chat_id, $datas = [])
+    public function sendVoice($chat_id, $datas = [])
     {
         return Framework::Request(
             'sendVoice',
@@ -93,7 +93,7 @@ class Method
         );
     }
 
-    public static function sendVideoNote($chat_id, $datas = [])
+    public function sendVideoNote($chat_id, $datas = [])
     {
         return Framework::Request(
             'sendVideoNote',
@@ -103,7 +103,7 @@ class Method
         );
     }
 
-    public static function sendMediaGroup($chat_id, $datas = [])
+    public function sendMediaGroup($chat_id, $datas = [])
     {
         return Framework::Request(
             'sendMediaGroup',
@@ -113,7 +113,7 @@ class Method
         );
     }
 
-    public static function sendLocation($chat_id, $datas = [])
+    public function sendLocation($chat_id, $datas = [])
     {
         return Framework::Request(
             'sendLocation',
@@ -123,7 +123,7 @@ class Method
         );
     }
 
-    public static function sendVenue($chat_id, $datas = [])
+    public function sendVenue($chat_id, $datas = [])
     {
         return Framework::Request(
             'sendVenue',
@@ -133,7 +133,7 @@ class Method
         );
     }
 
-    public static function sendContact($chat_id, $datas = [])
+    public function sendContact($chat_id, $datas = [])
     {
         return Framework::Request(
             'sendContact',
@@ -143,7 +143,7 @@ class Method
         );
     }
 
-    public static function sendPoll($chat_id, $datas = [])
+    public function sendPoll($chat_id, $datas = [])
     {
         return Framework::Request(
             'sendPoll',
@@ -153,7 +153,7 @@ class Method
         );
     }
 
-    public static function sendDice($chat_id, $datas = [])
+    public function sendDice($chat_id, $datas = [])
     {
         return Framework::Request(
             'sendDice',
@@ -163,7 +163,7 @@ class Method
         );
     }
 
-    public static function copyMessage($chat_id, $datas = [])
+    public function copyMessage($chat_id, $datas = [])
     {
         return Framework::Request(
             'copyMessage',
@@ -173,7 +173,7 @@ class Method
         );
     }
 
-    public static function forwardMessage($chat_id, $from_chat_id, $message_id)
+    public function forwardMessage($chat_id, $from_chat_id, $message_id)
     {
         return Framework::Request('forwardMessage', [
             'chat_id' => $chat_id,
@@ -182,7 +182,7 @@ class Method
         ]);
     }
 
-    public static function deleteMessage($chat_id, $message_id)
+    public function deleteMessage($chat_id, $message_id)
     {
         return Framework::Request('deleteMessage', [
             'chat_id' => $chat_id,
@@ -190,7 +190,7 @@ class Method
         ]);
     }
 
-    public static function editMessageText($chat_id, $datas = [])
+    public function editMessageText($chat_id, $datas = [])
     {
         return Framework::Request(
             'editMessageText',
@@ -200,7 +200,7 @@ class Method
         );
     }
 
-    public static function editMessageCaption($chat_id, $datas = [])
+    public function editMessageCaption($chat_id, $datas = [])
     {
         return Framework::Request(
             'editMessageCaption',
@@ -210,7 +210,7 @@ class Method
         );
     }
 
-    public static function editMessageMedia($chat_id, $datas = [])
+    public function editMessageMedia($chat_id, $datas = [])
     {
         return Framework::Request(
             'editMessageMedia',
@@ -220,7 +220,7 @@ class Method
         );
     }
 
-    public static function editMessageReplyMarkup($chat_id, $datas = [])
+    public function editMessageReplyMarkup($chat_id, $datas = [])
     {
         return Framework::Request(
             'editMessageReplyMarkup',
@@ -230,7 +230,7 @@ class Method
         );
     }
 
-    public static function stopPoll($chat_id, $datas = [])
+    public function stopPoll($chat_id, $datas = [])
     {
         return Framework::Request(
             'stopPoll',
@@ -240,14 +240,14 @@ class Method
         );
     }
 
-    public static function getFile($file_id)
+    public function getFile($file_id)
     {
         return Framework::Request('getFile', [
             'file_id' => $file_id
         ]);
     }
 
-    public static function getUserProfilePhotos($user_id, $datas = [])
+    public function getUserProfilePhotos($user_id, $datas = [])
     {
         return Framework::Request(
             'getUserProfilePhotos',
@@ -257,7 +257,7 @@ class Method
         );
     }
 
-    public static function answerInlineQuery($inline_query_id, $datas = [])
+    public function answerInlineQuery($inline_query_id, $datas = [])
     {
         return Framework::Request(
             'answerInlineQuery',
@@ -267,7 +267,7 @@ class Method
         );
     }
 
-    public static function answerCallback($call_id, $text, $show_alert = false)
+    public function answerCallback($call_id, $text, $show_alert = false)
     {
         return Framework::Request('answerCallbackQuery', [
             'callback_query_id' => $call_id,
@@ -276,7 +276,7 @@ class Method
         ]);
     }
 
-    public static function editMessageLiveLocation($chat_id, $datas = [])
+    public function editMessageLiveLocation($chat_id, $datas = [])
     {
         return Framework::Request(
             'editMessageLiveLocation',
@@ -286,7 +286,7 @@ class Method
         );
     }
 
-    public static function stopMessageLiveLocation($chat_id, $datas = [])
+    public function stopMessageLiveLocation($chat_id, $datas = [])
     {
         return Framework::Request(
             'stopMessageLiveLocation',
@@ -296,7 +296,7 @@ class Method
         );
     }
 
-    public static function sendInvoice($chat_id, $datas = [])
+    public function sendInvoice($chat_id, $datas = [])
     {
         return Framework::Request(
             'sendInvoice',
@@ -306,7 +306,7 @@ class Method
         );
     }
 
-    public static function sendSticker($chat_id, $datas = [])
+    public function sendSticker($chat_id, $datas = [])
     {
         return Framework::Request(
             'sendSticker',
@@ -316,7 +316,7 @@ class Method
         );
     }
 
-    public static function answerShippingQuery($shipping_query_id, $datas = [])
+    public function answerShippingQuery($shipping_query_id, $datas = [])
     {
         return Framework::Request(
             'answerShippingQuery',
@@ -326,7 +326,7 @@ class Method
         );
     }
 
-    public static function answerPreCheckoutQuery($pre_checkout_query_id, $datas = [])
+    public function answerPreCheckoutQuery($pre_checkout_query_id, $datas = [])
     {
         return Framework::Request(
             'answerPreCheckoutQuery',
@@ -336,7 +336,7 @@ class Method
         );
     }
 
-    public static function sendGame($chat_id, $datas = [])
+    public function sendGame($chat_id, $datas = [])
     {
         return Framework::Request(
             'sendGame',
@@ -346,7 +346,7 @@ class Method
         );
     }
 
-    public static function banChatMember($chat_id, $datas = [])
+    public function banChatMember($chat_id, $datas = [])
     {
         return Framework::Request(
             'banChatMember',
@@ -356,7 +356,7 @@ class Method
         );
     }
 
-    public static function unbanChatMember($chat_id, $datas = [])
+    public function unbanChatMember($chat_id, $datas = [])
     {
         return Framework::Request(
             'unbanChatMember',
@@ -366,7 +366,7 @@ class Method
         );
     }
 
-    public static function restrictChatMember($chat_id, $datas = [])
+    public function restrictChatMember($chat_id, $datas = [])
     {
         return Framework::Request(
             'restrictChatMember',
@@ -376,7 +376,7 @@ class Method
         );
     }
 
-    public static function promoteChatMember($chat_id, $datas = [])
+    public function promoteChatMember($chat_id, $datas = [])
     {
         return Framework::Request(
             'promoteChatMember',
@@ -386,7 +386,7 @@ class Method
         );
     }
 
-    public static function setChatAdministratorCustomTitle($chat_id, $datas = [])
+    public function setChatAdministratorCustomTitle($chat_id, $datas = [])
     {
         return Framework::Request(
             'setChatAdministratorCustomTitle',
@@ -396,7 +396,7 @@ class Method
         );
     }
 
-    public static function setChatPermissions($chat_id, $datas = [])
+    public function setChatPermissions($chat_id, $datas = [])
     {
         return Framework::Request(
             'setChatPermissions',
@@ -406,7 +406,7 @@ class Method
         );
     }
 
-    public static function exportChatInviteLink($chat_id, $datas = [])
+    public function exportChatInviteLink($chat_id, $datas = [])
     {
         return Framework::Request(
             'exportChatInviteLink',
@@ -416,7 +416,7 @@ class Method
         );
     }
 
-    public static function createChatInviteLink($chat_id, $datas = [])
+    public function createChatInviteLink($chat_id, $datas = [])
     {
         return Framework::Request(
             'createChatInviteLink',
@@ -426,7 +426,7 @@ class Method
         );
     }
 
-    public static function editChatInviteLink($chat_id, $datas = [])
+    public function editChatInviteLink($chat_id, $datas = [])
     {
         return Framework::Request(
             'editChatInviteLink',
@@ -436,7 +436,7 @@ class Method
         );
     }
 
-    public static function revokeChatInviteLink($chat_id, $invite_link)
+    public function revokeChatInviteLink($chat_id, $invite_link)
     {
         return Framework::Request(
             'revokeChatInviteLink',
@@ -447,7 +447,7 @@ class Method
         );
     }
 
-    public static function setChatPhoto($chat_id, $photo)
+    public function setChatPhoto($chat_id, $photo)
     {
         return Framework::Request(
             'setChatPhoto',
@@ -458,7 +458,7 @@ class Method
         );
     }
 
-    public static function deleteChatPhoto($chat_id)
+    public function deleteChatPhoto($chat_id)
     {
         return Framework::Request(
             'deleteChatPhoto',
@@ -468,7 +468,7 @@ class Method
         );
     }
 
-    public static function setChatTitle($chat_id, $title)
+    public function setChatTitle($chat_id, $title)
     {
         return Framework::Request(
             'setChatPhoto',
@@ -479,7 +479,7 @@ class Method
         );
     }
 
-    public static function setChatDescription($chat_id, $description)
+    public function setChatDescription($chat_id, $description)
     {
         return Framework::Request(
             'setChatDescription',
@@ -490,7 +490,7 @@ class Method
         );
     }
 
-    public static function pinChatMessage($chat_id, $message_id, $disable_notification = false)
+    public function pinChatMessage($chat_id, $message_id, $disable_notification = false)
     {
         return Framework::Request(
             'pinChatMessage',
@@ -502,7 +502,7 @@ class Method
         );
     }
 
-    public static function unpinChatMessage($chat_id, $message_id)
+    public function unpinChatMessage($chat_id, $message_id)
     {
         return Framework::Request(
             'unpinChatMessage',
@@ -513,7 +513,7 @@ class Method
         );
     }
 
-    public static function unpinAllChatMessages($chat_id)
+    public function unpinAllChatMessages($chat_id)
     {
         return Framework::Request(
             'unpinAllChatMessages',
@@ -523,7 +523,7 @@ class Method
         );
     }
 
-    public static function leaveChat($chat_id)
+    public function leaveChat($chat_id)
     {
         return Framework::Request(
             'leaveChat',
@@ -533,7 +533,7 @@ class Method
         );
     }
 
-    public static function getChat($chat_id)
+    public function getChat($chat_id)
     {
         return Framework::Request(
             'getChat',
@@ -543,7 +543,7 @@ class Method
         );
     }
 
-    public static function getChatAdministrators($chat_id)
+    public function getChatAdministrators($chat_id)
     {
         return Framework::Request(
             'getChatAdministrators',
@@ -553,7 +553,7 @@ class Method
         );
     }
 
-    public static function getChatMemberCount($chat_id)
+    public function getChatMemberCount($chat_id)
     {
         return Framework::Request(
             'getChatMemberCount',
@@ -563,7 +563,7 @@ class Method
         );
     }
 
-    public static function getChatMember($chat_id, $user_id)
+    public function getChatMember($chat_id, $user_id)
     {
         return Framework::Request(
             'getChatMember',
@@ -574,7 +574,7 @@ class Method
         );
     }
 
-    public static function setChatStickerSet($chat_id, $sticker_set_name)
+    public function setChatStickerSet($chat_id, $sticker_set_name)
     {
         return Framework::Request(
             'setChatStickerSet',
@@ -585,7 +585,7 @@ class Method
         );
     }
 
-    public static function deleteChatStickerSet($chat_id)
+    public function deleteChatStickerSet($chat_id)
     {
         return Framework::Request(
             'deleteChatStickerSet',

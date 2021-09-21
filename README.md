@@ -22,12 +22,11 @@ composer require khamdullaevuz/telegram-bot-php
 ```php
 require_once __DIR__.'/vendor/autoload.php';
 
-use Framework\Config;
-use Framework\Method;
-use Framework\Plugin;
+use Framework\Framework;
 use Framework\Update;
+use Framework\Plugin;
 
-Config::setApiToken("API_TOKEN");
+$telegram = new Framework("API_KEY");
 
 $input = Update::getInput();
 if($input->message){
@@ -41,7 +40,7 @@ $keyboard = Plugin::buildInlineKeyboard([
 ]);
 
 if($text == "/start"){
-	Method::sendMessage($chat_id, [
+	$telegram->sendMessage($chat_id, [
 		'text'=>"Salom",
 		'reply_markup'=>$keyboard
 	]);
@@ -60,12 +59,11 @@ cd telegram-bot-php
 ```php
 require_once __DIR__.'/src/loader.php';
 
-use Framework\Config;
-use Framework\Method;
-use Framework\Plugin;
+use Framework\Framework;
 use Framework\Update;
+use Framework\Plugin;
 
-Config::setApiToken("API_TOKEN");
+$telegram = new Framework("API_KEY");
 
 $input = Update::getInput();
 if($input->message){
@@ -79,7 +77,7 @@ $keyboard = Plugin::buildInlineKeyboard([
 ]);
 
 if($text == "/start"){
-	Method::sendMessage($chat_id, [
+	$telegram->sendMessage($chat_id, [
 		'text'=>"Salom",
 		'reply_markup'=>$keyboard
 	]);

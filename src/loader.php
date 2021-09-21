@@ -11,9 +11,8 @@ if (phpversion() >= 7.1) {
     }
 
     if ($i == 3) {
-        require 'config/Config.php';
-        require 'framework/Framework.php';
         require 'method/Method.php';
+        require 'framework/Framework.php';
         require 'plugin/Plugin.php';
         require 'update/Update.php';
         require 'database/Database.php';

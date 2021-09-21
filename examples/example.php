@@ -8,12 +8,11 @@
 
 require_once __DIR__ . '/../src/loader.php';
 
-use Framework\Config;
-use Framework\Method;
-use Framework\Plugin;
 use Framework\Update;
+use Framework\Plugin;
+use Framework\Framework;
 
-Config::setApiToken("API_TOKEN");
+$telegram = new Framework("API_KEY");
 
 $input = Update::getInput();
 if ($input->message) {
@@ -35,22 +34,22 @@ $keyboard = Plugin::buildInlineKeyboard([
 ]);
 
 if ($text == "/start") {
-	Method::sendMessage($chat_id, [
+	$telegram->sendMessage($chat_id, [
 		'text' => "Salom",
 		'reply_markup' => $keyboard
 	]);
 }
 
 if ($input->callback_query->data == "inline") {
-	Method::deleteMessage($callback_chat_id, $callback_message_id);
-	Method::sendMessage($callback_chat_id, [
+	$telegram->deleteMessage($callback_chat_id, $callback_message_id);
+	$telegram->sendMessage($callback_chat_id, [
 		'text' => "Ismingizni yozib yuboring:"
 	]);
 	Plugin::setSession($callback_chat_id, "ism");
 }
 
 if (Plugin::getSession($chat_id) == "ism") {
-	Method::sendMessage($chat_id, [
+	$telegram->sendMessage($chat_id, [
 		'text' => "Assalomu alaykum $text"
 	]);
 	Plugin::stopSession($chat_id);
