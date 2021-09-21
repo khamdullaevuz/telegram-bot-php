@@ -7,10 +7,7 @@
         "classmap": ["src"]
     },
     "require": {
-        "php": ">=7.1", 
-        "ext-sqlite3": "*",       
-        "ext-mysqli": "*",
-        "ext-pdo": "*"
+        "php": ">=7.1"
     },
     "authors": [
         {
