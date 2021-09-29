@@ -6,7 +6,7 @@
  * @privacy Mualliflik huquqini hurmat qiling
  */
 
-require 'src/loader.php';
+require '../src/loader.php';
 
 use Lib\Input;
 use Lib\Plugin;

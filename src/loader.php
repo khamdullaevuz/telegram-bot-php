@@ -12,7 +12,7 @@ if (phpversion() >= 5.6) {
 
     if ($i == 3) {
         require 'method/Method.php';
-        require 'framework/Framework.php';
+        require 'library/Runner.php';
         require 'plugin/Plugin.php';
         require 'input/Input.php';
         require 'database/Database.php';
