@@ -20,7 +20,7 @@ composer require khamdullaevuz/telegram-bot-php
 #### Ulanish
 
 ```php
-require '/vendor/autoload.php';
+require 'vendor/autoload.php';
 
 use Lib\Runner;
 use Lib\Input;
@@ -57,7 +57,7 @@ cd telegram-bot-php
 #### Ulanish
 
 ```php
-require_once __DIR__.'/src/loader.php';
+require 'src/loader.php';
 
 use Lib\Runner;
 use Lib\Input;
