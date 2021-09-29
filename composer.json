@@ -1,21 +1,23 @@
 {
-    "name": "khamdullaevuz/telegram-bot-php",
-    "type": "library",
-    "description": "Telegram bot framework",
-    "license": "MIT",
-    "autoload": {
-        "classmap": ["src"]
-    },
-    "require": {
-        "php": ">=7.1", 
-        "ext-sqlite3": "*",       
-        "ext-mysqli": "*",
-        "ext-pdo": "*"
-    },
-    "authors": [
-        {
-            "name": "Elbek Khamdullaev",
-            "email": "elbek.khamdullaev@mail.ru"
-        }
+  "name": "khamdullaevuz/telegram-bot-php",
+  "type": "library",
+  "description": "Telegram bot library",
+  "license": "MIT",
+  "autoload": {
+    "classmap": [
+      "src"
     ]
+  },
+  "require": {
+    "php": ">=7.1",
+    "ext-sqlite3": "*",
+    "ext-mysqli": "*",
+    "ext-pdo": "*"
+  },
+  "authors": [
+    {
+      "name": "Elbek Khamdullaev",
+      "email": "elbek.khamdullaev@mail.ru"
+    }
+  ]
 }

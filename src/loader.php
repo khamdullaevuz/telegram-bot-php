@@ -17,10 +17,10 @@ if (phpversion() >= 7.1) {
         require 'input/Input.php';
         require 'database/Database.php';
     } else {
-        echo "Serveringizda mysqli, sqlite3, pdo yoqilmagan!";
+        echo "Serveringizda mysqli, sqlite3, pdo yoqilmagan! Ushbu sozlamalar yoqilmagan bo'lsa bizning librarymiz ishlay olmaydi";
         exit;
     }
 } else {
-    echo "Php versiyangiz 7.1 dan kichik va bizning framework buni qo'llamaydi";
+    echo "Php versiyangiz 7.1 dan kichik va bizning library buni qo'llamaydi";
     exit;
 }
