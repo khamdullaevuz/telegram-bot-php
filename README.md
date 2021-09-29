@@ -1,6 +1,6 @@
 # Telegram bot php
 
-![PHP](https://img.shields.io/badge/php-%3E%3D7.1-8892bf.svg)
+![PHP](https://img.shields.io/badge/php-%3E%3D5.6-8892bf.svg)
 ![SQLite](https://img.shields.io/badge/SQLite3-required-green.svg)
 ![MySQLi](https://img.shields.io/badge/MySQLi-required-green.svg)
 ![PDO](https://img.shields.io/badge/PDO-required-green.svg)
