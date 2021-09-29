@@ -6,7 +6,7 @@
  * @privacy Mualliflik huquqini hurmat qiling
  */
 
-namespace Framework;
+namespace Lib;
 
 class Plugin
 {

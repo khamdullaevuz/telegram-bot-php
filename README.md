@@ -20,15 +20,15 @@ composer require khamdullaevuz/telegram-bot-php
 #### Ulanish
 
 ```php
-require_once __DIR__.'/vendor/autoload.php';
+require '/vendor/autoload.php';
 
-use Framework\Framework;
-use Framework\Update;
-use Framework\Plugin;
+use Lib\Runner;
+use Lib\Input;
+use Lib\Plugin;
 
-$telegram = new Framework("API_KEY");
+$telegram = new Runner("API_KEY");
 
-$input = Update::getInput();
+$input = Input::getInput();
 if($input->message){
 $message = $input->message;
 $chat_id = $message->chat->id;
@@ -59,13 +59,13 @@ cd telegram-bot-php
 ```php
 require_once __DIR__.'/src/loader.php';
 
-use Framework\Framework;
-use Framework\Update;
-use Framework\Plugin;
+use Lib\Runner;
+use Lib\Input;
+use Lib\Plugin;
 
-$telegram = new Framework("API_KEY");
+$telegram = new Runner("API_KEY");
 
-$input = Update::getInput();
+$input = Input::getInput();
 if($input->message){
 $message = $input->message;
 $chat_id = $message->chat->id;
@@ -89,7 +89,7 @@ if($text == "/start"){
 Mavjud ma'lumotlar bazasi: mysqli, sqlite, pdo
 
 ```php
-use Framework\DataBase\SQLite;
+use Framework\DB\SQLite;
 $db = new SQLite("my.db");
 ```
 

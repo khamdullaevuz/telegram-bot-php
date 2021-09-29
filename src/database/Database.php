@@ -1,6 +1,6 @@
 <?php
 
-namespace Framework\DataBase;
+namespace Lib\DB;
 
 class MySQL extends \MySQLi
 {

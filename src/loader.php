@@ -14,7 +14,7 @@ if (phpversion() >= 7.1) {
         require 'method/Method.php';
         require 'framework/Framework.php';
         require 'plugin/Plugin.php';
-        require 'update/Update.php';
+        require 'input/Input.php';
         require 'database/Database.php';
     } else {
         echo "Serveringizda mysqli, sqlite3, pdo yoqilmagan!";

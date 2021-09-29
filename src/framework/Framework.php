@@ -6,9 +6,9 @@
  * @privacy Mualliflik huquqini hurmat qiling
  */
 
-namespace Framework;
+namespace Lib;
 
-class Framework extends Method
+class Runner extends Method
 {
     private static $api_key;
 
