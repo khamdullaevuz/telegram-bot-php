@@ -1,6 +1,6 @@
 <?php
 
-if (phpversion() >= 7.1) {
+if (phpversion() >= 5.6) {
     $ext = ['mysqli', 'sqlite3', 'PDO'];
     $i = 0;
 
@@ -21,6 +21,6 @@ if (phpversion() >= 7.1) {
         exit;
     }
 } else {
-    echo "Php versiyangiz 7.1 dan kichik va bizning library buni qo'llamaydi";
+    echo "Php versiyangiz 5.6 dan kichik va bizning library buni qo'llamaydi";
     exit;
 }
