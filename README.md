@@ -89,7 +89,7 @@ if($text == "/start"){
 Mavjud ma'lumotlar bazasi: mysqli, sqlite, pdo
 
 ```php
-use Framework\DB\SQLite;
+use Lib\DB\SQLite;
 $db = new SQLite("my.db");
 ```
 
