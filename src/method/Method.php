@@ -267,7 +267,7 @@ class Method
         );
     }
 
-    public function answerCallback($call_id, $text, $show_alert = false)
+    public function answerCallbackQuery($call_id, $text, $show_alert = false)
     {
         return Runner::Request('answerCallbackQuery', [
             'callback_query_id' => $call_id,
