@@ -1,9 +1,7 @@
 # Telegram bot php
 
 ![PHP](https://img.shields.io/badge/php-%3E%3D5.6-8892bf.svg)
-![SQLite](https://img.shields.io/badge/SQLite3-required-green.svg)
 ![MySQLi](https://img.shields.io/badge/MySQLi-required-green.svg)
-![PDO](https://img.shields.io/badge/PDO-required-green.svg)
 
 ![GitHub forks](https://img.shields.io/github/forks/KhamdullaevUz/telegram-bot-php?style=flat)
 ![GitHub Repo stars](https://img.shields.io/github/stars/KhamdullaevUz/telegram-bot-php?style=flat)
@@ -22,15 +20,13 @@ composer require khamdullaevuz/telegram-bot-php
 ```php
 require 'vendor/autoload.php';
 
-use Lib\Runner;
-use Lib\Input;
+use Lib\Telegram;
 use Lib\Plugin;
 
-$telegram = new Runner("API_KEY");
-
-$input = Input::getInput();
-if($input->message){
-$message = $input->message;
+$telegram = new Telegram("API_KEY");
+;
+if($telegram->message){
+$message = $telegram->message;
 $chat_id = $message->chat->id;
 $text = $message->text;
 }
@@ -59,15 +55,13 @@ cd telegram-bot-php
 ```php
 require 'src/loader.php';
 
-use Lib\Runner;
-use Lib\Input;
+use Lib\Telegram;
 use Lib\Plugin;
 
-$telegram = new Runner("API_KEY");
+$telegram = new Telegram("API_KEY");
 
-$input = Input::getInput();
-if($input->message){
-$message = $input->message;
+if($telegram->message){
+$message = $telegram->message;
 $chat_id = $message->chat->id;
 $text = $message->text;
 }
@@ -86,11 +80,9 @@ if($text == "/start"){
 
 ### Ma'lumotlar bazasi bilan ishlash
 
-Mavjud ma'lumotlar bazasi: mysqli, sqlite, pdo
-
 ```php
-use Lib\DB\SQLite;
-$db = new SQLite("my.db");
+use Lib\Database\MySQL;
+$db = new MySQL("hostname", "username", "password", "dbname");
 ```
 
 ### Examples

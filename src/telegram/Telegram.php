@@ -8,13 +8,31 @@
 
 namespace Lib;
 
-class Runner extends Method
+class Telegram extends Method
 {
     private static $api_key;
 
     function __construct($api_key)
     {
         self::$api_key = $api_key;
+
+        $input = self::exportJson(self::getContent('php://input'));
+        if (!$input) {
+            echo "No input!";
+            exit;
+        } else {
+            return $input;
+        }
+    }
+
+    public static function getContent($data)
+    {
+        return file_get_contents($data);
+    }
+
+    public static function exportJson($json, $array = false)
+    {
+        return json_decode($json, $array);
     }
 
     public static function Request($method, $datas = [])

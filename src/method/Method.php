@@ -12,7 +12,7 @@ class Method
 {
     public function sendMessage($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'sendMessage',
             array_merge([
                 'chat_id' => $chat_id
@@ -22,12 +22,12 @@ class Method
 
     public function getMe()
     {
-        return Runner::Request('getme');
+        return Telegram::Request('getme');
     }
 
     public function sendPhoto($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'sendPhoto',
             array_merge([
                 'chat_id' => $chat_id
@@ -37,7 +37,7 @@ class Method
 
     public function sendAudio($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'sendAudio',
             array_merge([
                 'chat_id' => $chat_id
@@ -47,7 +47,7 @@ class Method
 
     public function sendVideo($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'sendVideo',
             array_merge([
                 'chat_id' => $chat_id
@@ -57,7 +57,7 @@ class Method
 
     public function sendAction($chat_id, $action)
     {
-        return Runner::Request('sendChatAction', [
+        return Telegram::Request('sendChatAction', [
             'chat_id' => $chat_id,
             'action' => $action
         ]);
@@ -65,7 +65,7 @@ class Method
 
     public function sendDocument($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'sendDocument',
             array_merge([
                 'chat_id' => $chat_id
@@ -75,7 +75,7 @@ class Method
 
     public function sendAnimation($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'sendAnimation',
             array_merge([
                 'chat_id' => $chat_id
@@ -85,7 +85,7 @@ class Method
 
     public function sendVoice($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'sendVoice',
             array_merge([
                 'chat_id' => $chat_id
@@ -95,7 +95,7 @@ class Method
 
     public function sendVideoNote($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'sendVideoNote',
             array_merge([
                 'chat_id' => $chat_id
@@ -105,7 +105,7 @@ class Method
 
     public function sendMediaGroup($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'sendMediaGroup',
             array_merge([
                 'chat_id' => $chat_id
@@ -115,7 +115,7 @@ class Method
 
     public function sendLocation($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'sendLocation',
             array_merge([
                 'chat_id' => $chat_id
@@ -125,7 +125,7 @@ class Method
 
     public function sendVenue($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'sendVenue',
             array_merge([
                 'chat_id' => $chat_id
@@ -135,7 +135,7 @@ class Method
 
     public function sendContact($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'sendContact',
             array_merge([
                 'chat_id' => $chat_id
@@ -145,7 +145,7 @@ class Method
 
     public function sendPoll($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'sendPoll',
             array_merge([
                 'chat_id' => $chat_id
@@ -155,7 +155,7 @@ class Method
 
     public function sendDice($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'sendDice',
             array_merge([
                 'chat_id' => $chat_id
@@ -165,7 +165,7 @@ class Method
 
     public function copyMessage($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'copyMessage',
             array_merge([
                 'chat_id' => $chat_id
@@ -175,7 +175,7 @@ class Method
 
     public function forwardMessage($chat_id, $from_chat_id, $message_id)
     {
-        return Runner::Request('forwardMessage', [
+        return Telegram::Request('forwardMessage', [
             'chat_id' => $chat_id,
             'from_chat_id' => $from_chat_id,
             'message_id' => $message_id
@@ -184,7 +184,7 @@ class Method
 
     public function deleteMessage($chat_id, $message_id)
     {
-        return Runner::Request('deleteMessage', [
+        return Telegram::Request('deleteMessage', [
             'chat_id' => $chat_id,
             'message_id' => $message_id
         ]);
@@ -192,7 +192,7 @@ class Method
 
     public function editMessageText($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'editMessageText',
             array_merge([
                 'chat_id' => $chat_id
@@ -202,7 +202,7 @@ class Method
 
     public function editMessageCaption($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'editMessageCaption',
             array_merge([
                 'chat_id' => $chat_id
@@ -212,7 +212,7 @@ class Method
 
     public function editMessageMedia($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'editMessageMedia',
             array_merge([
                 'chat_id' => $chat_id
@@ -222,7 +222,7 @@ class Method
 
     public function editMessageReplyMarkup($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'editMessageReplyMarkup',
             array_merge([
                 'chat_id' => $chat_id
@@ -232,7 +232,7 @@ class Method
 
     public function stopPoll($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'stopPoll',
             array_merge([
                 'chat_id' => $chat_id
@@ -242,14 +242,14 @@ class Method
 
     public function getFile($file_id)
     {
-        return Runner::Request('getFile', [
+        return Telegram::Request('getFile', [
             'file_id' => $file_id
         ]);
     }
 
     public function getUserProfilePhotos($user_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'getUserProfilePhotos',
             array_merge([
                 'user_id' => $user_id
@@ -259,7 +259,7 @@ class Method
 
     public function answerInlineQuery($inline_query_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'answerInlineQuery',
             array_merge([
                 'inline_query_id' => $inline_query_id
@@ -269,7 +269,7 @@ class Method
 
     public function answerCallbackQuery($call_id, $text, $show_alert = false)
     {
-        return Runner::Request('answerCallbackQuery', [
+        return Telegram::Request('answerCallbackQuery', [
             'callback_query_id' => $call_id,
             'text' => $text,
             'show_alert' => $show_alert
@@ -278,7 +278,7 @@ class Method
 
     public function editMessageLiveLocation($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'editMessageLiveLocation',
             array_merge([
                 'chat_id' => $chat_id
@@ -288,7 +288,7 @@ class Method
 
     public function stopMessageLiveLocation($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'stopMessageLiveLocation',
             array_merge([
                 'chat_id' => $chat_id
@@ -298,7 +298,7 @@ class Method
 
     public function sendInvoice($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'sendInvoice',
             array_merge([
                 'chat_id' => $chat_id
@@ -308,7 +308,7 @@ class Method
 
     public function sendSticker($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'sendSticker',
             array_merge([
                 'chat_id' => $chat_id
@@ -318,7 +318,7 @@ class Method
 
     public function answerShippingQuery($shipping_query_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'answerShippingQuery',
             array_merge([
                 'shipping_query_id' => $shipping_query_id
@@ -328,7 +328,7 @@ class Method
 
     public function answerPreCheckoutQuery($pre_checkout_query_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'answerPreCheckoutQuery',
             array_merge([
                 'pre_checkout_query_id' => $pre_checkout_query_id
@@ -338,7 +338,7 @@ class Method
 
     public function sendGame($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'sendGame',
             array_merge([
                 'chat_id' => $chat_id
@@ -348,7 +348,7 @@ class Method
 
     public function banChatMember($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'banChatMember',
             array_merge([
                 'chat_id' => $chat_id
@@ -358,7 +358,7 @@ class Method
 
     public function unbanChatMember($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'unbanChatMember',
             array_merge([
                 'chat_id' => $chat_id
@@ -368,7 +368,7 @@ class Method
 
     public function restrictChatMember($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'restrictChatMember',
             array_merge([
                 'chat_id' => $chat_id
@@ -378,7 +378,7 @@ class Method
 
     public function promoteChatMember($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'promoteChatMember',
             array_merge([
                 'chat_id' => $chat_id
@@ -388,7 +388,7 @@ class Method
 
     public function setChatAdministratorCustomTitle($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'setChatAdministratorCustomTitle',
             array_merge([
                 'chat_id' => $chat_id
@@ -398,7 +398,7 @@ class Method
 
     public function setChatPermissions($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'setChatPermissions',
             array_merge([
                 'chat_id' => $chat_id
@@ -408,7 +408,7 @@ class Method
 
     public function exportChatInviteLink($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'exportChatInviteLink',
             [
                 'chat_id' => $chat_id
@@ -418,7 +418,7 @@ class Method
 
     public function createChatInviteLink($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'createChatInviteLink',
             array_merge([
                 'chat_id' => $chat_id
@@ -428,7 +428,7 @@ class Method
 
     public function editChatInviteLink($chat_id, $datas = [])
     {
-        return Runner::Request(
+        return Telegram::Request(
             'editChatInviteLink',
             array_merge([
                 'chat_id' => $chat_id
@@ -438,7 +438,7 @@ class Method
 
     public function revokeChatInviteLink($chat_id, $invite_link)
     {
-        return Runner::Request(
+        return Telegram::Request(
             'revokeChatInviteLink',
             [
                 'chat_id' => $chat_id,
@@ -449,7 +449,7 @@ class Method
 
     public function setChatPhoto($chat_id, $photo)
     {
-        return Runner::Request(
+        return Telegram::Request(
             'setChatPhoto',
             [
                 'chat_id' => $chat_id,
@@ -460,7 +460,7 @@ class Method
 
     public function deleteChatPhoto($chat_id)
     {
-        return Runner::Request(
+        return Telegram::Request(
             'deleteChatPhoto',
             [
                 'chat_id' => $chat_id
@@ -470,7 +470,7 @@ class Method
 
     public function setChatTitle($chat_id, $title)
     {
-        return Runner::Request(
+        return Telegram::Request(
             'setChatPhoto',
             [
                 'chat_id' => $chat_id,
@@ -481,7 +481,7 @@ class Method
 
     public function setChatDescription($chat_id, $description)
     {
-        return Runner::Request(
+        return Telegram::Request(
             'setChatDescription',
             [
                 'chat_id' => $chat_id,
@@ -492,7 +492,7 @@ class Method
 
     public function pinChatMessage($chat_id, $message_id, $disable_notification = false)
     {
-        return Runner::Request(
+        return Telegram::Request(
             'pinChatMessage',
             [
                 'chat_id' => $chat_id,
@@ -504,7 +504,7 @@ class Method
 
     public function unpinChatMessage($chat_id, $message_id)
     {
-        return Runner::Request(
+        return Telegram::Request(
             'unpinChatMessage',
             [
                 'chat_id' => $chat_id,
@@ -515,7 +515,7 @@ class Method
 
     public function unpinAllChatMessages($chat_id)
     {
-        return Runner::Request(
+        return Telegram::Request(
             'unpinAllChatMessages',
             [
                 'chat_id' => $chat_id
@@ -525,7 +525,7 @@ class Method
 
     public function leaveChat($chat_id)
     {
-        return Runner::Request(
+        return Telegram::Request(
             'leaveChat',
             [
                 'chat_id' => $chat_id
@@ -535,7 +535,7 @@ class Method
 
     public function getChat($chat_id)
     {
-        return Runner::Request(
+        return Telegram::Request(
             'getChat',
             [
                 'chat_id' => $chat_id
@@ -545,7 +545,7 @@ class Method
 
     public function getChatAdministrators($chat_id)
     {
-        return Runner::Request(
+        return Telegram::Request(
             'getChatAdministrators',
             [
                 'chat_id' => $chat_id
@@ -555,7 +555,7 @@ class Method
 
     public function getChatMemberCount($chat_id)
     {
-        return Runner::Request(
+        return Telegram::Request(
             'getChatMemberCount',
             [
                 'chat_id' => $chat_id
@@ -565,7 +565,7 @@ class Method
 
     public function getChatMember($chat_id, $user_id)
     {
-        return Runner::Request(
+        return Telegram::Request(
             'getChatMember',
             [
                 'chat_id' => $chat_id,
@@ -576,7 +576,7 @@ class Method
 
     public function setChatStickerSet($chat_id, $sticker_set_name)
     {
-        return Runner::Request(
+        return Telegram::Request(
             'setChatStickerSet',
             [
                 'chat_id' => $chat_id,
@@ -587,7 +587,7 @@ class Method
 
     public function deleteChatStickerSet($chat_id)
     {
-        return Runner::Request(
+        return Telegram::Request(
             'deleteChatStickerSet',
             [
                 'chat_id' => $chat_id

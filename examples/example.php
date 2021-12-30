@@ -8,21 +8,19 @@
 
 require '../src/loader.php';
 
-use Lib\Input;
 use Lib\Plugin;
-use Lib\Runner;
+use Lib\Telegram;
 
-$telegram = new Runner("API_KEY");
+$telegram = new Telegram("API_KEY");
 
-$input = Input::getInput();
-if ($input->message) {
-	$message = $input->message;
+if ($telegram->message) {
+	$message = $telegram->message;
 	$chat_id = $message->chat->id;
 	$text = $message->text;
 }
 
-if ($input->callback_query) {
-	$callback = $input->callback_query;
+if ($telegram->callback_query) {
+	$callback = $telegram->callback_query;
 	$data = $callback->data;
 	$callback_message = $callback->message;
 	$callback_chat_id = $callback_message->chat->id;
