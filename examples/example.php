@@ -13,14 +13,15 @@ use Lib\Telegram;
 
 $telegram = new Telegram("API_KEY");
 
-if ($telegram->message) {
-	$message = $telegram->message;
+$input = Telegram::getInput();
+if ($input->message) {
+	$message = $input->message;
 	$chat_id = $message->chat->id;
 	$text = $message->text;
 }
 
-if ($telegram->callback_query) {
-	$callback = $telegram->callback_query;
+if ($input->callback_query) {
+	$callback = $input->callback_query;
 	$data = $callback->data;
 	$callback_message = $callback->message;
 	$callback_chat_id = $callback_message->chat->id;

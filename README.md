@@ -25,8 +25,9 @@ use Lib\Plugin;
 
 $telegram = new Telegram("API_KEY");
 
-if($telegram->message){
-$message = $telegram->message;
+$input = Telegram::getInput();
+if($input->message){
+$message = $input->message;
 $chat_id = $message->chat->id;
 $text = $message->text;
 }
@@ -60,8 +61,9 @@ use Lib\Plugin;
 
 $telegram = new Telegram("API_KEY");
 
-if($telegram->message){
-$message = $telegram->message;
+$input = Telegram::getInput();
+if($input->message){
+$message = $input->message;
 $chat_id = $message->chat->id;
 $text = $message->text;
 }

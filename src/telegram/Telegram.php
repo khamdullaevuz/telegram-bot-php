@@ -15,11 +15,13 @@ class Telegram extends Method
     function __construct($api_key)
     {
         self::$api_key = $api_key;
+    }
 
+    public static function getInput()
+    {
         $input = self::exportJson(self::getContent('php://input'));
         if (!$input) {
             echo "No input!";
-            exit;
         } else {
             return $input;
         }
