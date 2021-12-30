@@ -24,7 +24,7 @@ use Lib\Telegram;
 use Lib\Plugin;
 
 $telegram = new Telegram("API_KEY");
-;
+
 if($telegram->message){
 $message = $telegram->message;
 $chat_id = $message->chat->id;
