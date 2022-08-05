@@ -24,7 +24,7 @@ require 'vendor/autoload.php';
 use Khamdullaevuz\Telegram;
 use Khamdullaevuz\Plugin;
 
-$telegram = new Telegram("API_KEY");
+$telegram = new Telegram();
 
 $input = Telegram::getInput();
 if($input->message){
@@ -44,6 +44,17 @@ if($text == "/start"){
 	]);
 }
 ```
+
+# Konfiguratsiya
+
+#### .env.example fayldan .env fayl yaratib olamiz
+
+```bash
+cp .env.example .env
+```
+
+#### .env faylga kerakli sozlamalarni yozib olamiz
+
 ### Examples
 
 #### Example: [example](/examples/example.php)
