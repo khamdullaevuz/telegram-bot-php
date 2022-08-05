@@ -6,7 +6,7 @@
  * @privacy Mualliflik huquqini hurmat qiling
  */
 
-namespace Lib;
+namespace Khamdullaevuz;
 
 class Method
 {

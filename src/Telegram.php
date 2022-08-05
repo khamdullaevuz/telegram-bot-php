@@ -6,15 +6,17 @@
  * @privacy Mualliflik huquqini hurmat qiling
  */
 
-namespace Lib;
+namespace Khamdullaevuz;
 
 class Telegram extends Method
 {
     private static $api_key;
 
-    function __construct($api_key)
+    function __construct()
     {
-        self::$api_key = $api_key;
+        $dotenv = \Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+        $dotenv->load();
+        self::$api_key = $_ENV['TELEGRAM_API_KEY'];
     }
 
     public static function getInput()
@@ -22,6 +24,7 @@ class Telegram extends Method
         $input = self::exportJson(self::getContent('php://input'));
         if (!$input) {
             echo "No input!";
+            //exit;
         } else {
             return $input;
         }

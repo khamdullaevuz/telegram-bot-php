@@ -6,9 +6,9 @@
  * @privacy Mualliflik huquqini hurmat qiling
  */
 
-namespace Lib;
+namespace Khamdullaevuz;
 
-class Plugin
+class Plugin extends Telegram
 {
     public static function buildKeyboard($datas = [], $resize = true)
     {
@@ -58,18 +58,27 @@ class Plugin
         ]);
     }
 
+    public static function connectRedis()
+    {
+        $dotenv = \Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+        $dotenv->load();
+        $redis = new \Redis();
+        $redis->connect($_ENV['REDIS_HOST'], $_ENV['REDIS_PORT']);
+        return $redis;
+    }
+
     public static function setSession($id, $session)
     {
-        file_put_contents(__DIR__ . "/../session/$id.txt", $session);
+        self::connectRedis()->set($id, $session);
     }
 
     public static function getSession($id)
     {
-        return file_get_contents(__DIR__ . "/../session/$id.txt");
+        return self::connectRedis()->get($id);
     }
 
     public static function stopSession($id)
     {
-        unlink(__DIR__ . "/../session/$id.txt");
+        self::connectRedis()->del($id);
     }
 }

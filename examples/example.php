@@ -6,12 +6,12 @@
  * @privacy Mualliflik huquqini hurmat qiling
  */
 
-require '../src/loader.php';
+require __DIR__ . '/../vendor/autoload.php';
 
-use Lib\Plugin;
-use Lib\Telegram;
+use Khamdullaevuz\Plugin;
+use Khamdullaevuz\Telegram;
 
-$telegram = new Telegram("API_KEY");
+$telegram = new Telegram();
 
 $input = Telegram::getInput();
 if ($input->message) {
@@ -53,3 +53,7 @@ if (Plugin::getSession($chat_id) == "ism") {
 	]);
 	Plugin::stopSession($chat_id);
 }
+
+Plugin::setSession("1", "Test");
+echo Plugin::getSession("1");
+Plugin::stopSession("1");

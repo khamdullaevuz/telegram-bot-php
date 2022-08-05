@@ -18,10 +18,11 @@ composer require khamdullaevuz/telegram-bot-php
 #### Ulanish
 
 ```php
+<?php
 require 'vendor/autoload.php';
 
-use Lib\Telegram;
-use Lib\Plugin;
+use Khamdullaevuz\Telegram;
+use Khamdullaevuz\Plugin;
 
 $telegram = new Telegram("API_KEY");
 
@@ -43,50 +44,6 @@ if($text == "/start"){
 	]);
 }
 ```
-
-### Github orqali yuklash
-
-```bash
-git clone https://github.com/khamdullaevuz/telegram-bot-php
-cd telegram-bot-php
-```
-
-#### Ulanish
-
-```php
-require 'src/loader.php';
-
-use Lib\Telegram;
-use Lib\Plugin;
-
-$telegram = new Telegram("API_KEY");
-
-$input = Telegram::getInput();
-if($input->message){
-$message = $input->message;
-$chat_id = $message->chat->id;
-$text = $message->text;
-}
-
-$keyboard = Plugin::buildInlineKeyboard([
-	[["Inline Keyboard test","inline"]],
-]);
-
-if($text == "/start"){
-	$telegram->sendMessage($chat_id, [
-		'text'=>"Salom",
-		'reply_markup'=>$keyboard
-	]);
-}
-```
-
-### Ma'lumotlar bazasi bilan ishlash
-
-```php
-use Lib\Database\MySQL;
-$db = new MySQL("hostname", "username", "password", "dbname");
-```
-
 ### Examples
 
 #### Example: [example](/examples/example.php)

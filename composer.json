@@ -4,13 +4,14 @@
   "description": "Telegram bot library",
   "license": "MIT",
   "autoload": {
-    "classmap": [
-      "src"
-    ]
+    "psr-4": {
+      "Khamdullaevuz\\": "src/"
+    }
   },
   "require": {
     "php": ">=5.6",
-    "ext-mysqli": "*"
+    "ext-redis": "*",
+    "vlucas/phpdotenv": "^5.4"
   },
   "authors": [
     {
