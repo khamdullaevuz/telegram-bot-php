@@ -8,7 +8,7 @@
 
 namespace Khamdullaevuz;
 
-class Plugin extends Telegram
+class Plugin
 {
     public static function buildKeyboard($datas = [], $resize = true)
     {
