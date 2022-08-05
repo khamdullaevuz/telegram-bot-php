@@ -1,7 +1,7 @@
 # Telegram bot php
 
 ![PHP](https://img.shields.io/badge/php-%3E%3D5.6-8892bf.svg)
-![MySQLi](https://img.shields.io/badge/MySQLi-required-green.svg)
+![Redis](https://img.shields.io/badge/Redis-required-green.svg)
 
 ![GitHub forks](https://img.shields.io/github/forks/KhamdullaevUz/telegram-bot-php?style=flat)
 ![GitHub Repo stars](https://img.shields.io/github/stars/KhamdullaevUz/telegram-bot-php?style=flat)
